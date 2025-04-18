@@ -11,9 +11,9 @@ Wildlife Image Classification
 │   └──analysis.ipynb
 ├──competition_host_files
 │   ├──data
-│   │   ├──training_features.zip
+│   │   ├──training_features
 │   │   │   └──training_images
-│   │   ├──test_features.zip
+│   │   ├──test_features
 │   │   │   └──test_images
 │   │   ├──test_features.csv
 │   │   ├──train_features.csv
