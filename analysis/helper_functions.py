@@ -5,7 +5,7 @@ def get_mean_std (loader):
     channels_sum = 0
     channels_squared_mean_sum = 0
     num_batches = 0
-    for batch, (images, labels) in tqdm(enumerate(loader), desc="Computing mean and std", leave=False):
+    for batch, (images, labels) in tqdm(enumerate(loader), desc="Computing mean and std"):
         # batch_channel_mean0 = torch.mean(images, dim=[0, 2, 3])
         
         red_channel = images[:, 0, :, :].mean()
@@ -35,4 +35,12 @@ def get_mean_std (loader):
     std = variance ** 0.5
 
     return mean , std
+    
+
+# get class index
+def class_index(df, column_of_interest):
+    return  {
+        label:idx for idx, label in enumerate(df[column_of_interest].unique())
+    }
+    
     
